@@ -1,31 +1,35 @@
 ﻿using System;
 
+
+
 class Program
 {
+/*80.Известны данные о мощности двигателя 30 моделей легковых автомобилей. Выяснить, есть ли среди них модель, мощность двигателя которой превышает 200 л. с.
+using System;*/
     static void Main()
     {
-        // Create an array of engine powers for 30 car models
+        // Створення масиву потужностей двигуна для 30 моделей автомобілів
         int[] enginePowers = { 180, 220, 190, 205, 210, 175, 195, 215, 198, 202, 188, 230, 185, 195, 199, 205, 215, 180, 185, 192, 220, 240, 175, 210, 196, 206, 198, 190, 195, 215 };
 
-        bool hasModelWithHighPower = false;
+        bool hasModelWithHighPower = false; // Флаг, який вказує, чи є модель з високою потужністю
 
-        // Check each model in the array
+        // Перевіряємо кожну модель в масиві
         foreach (int power in enginePowers)
         {
             if (power > 200)
             {
-                hasModelWithHighPower = true;
-                Console.WriteLine($"Model with engine power > 200 hp: {power} hp");
+                hasModelWithHighPower = true; // Якщо потужність більше 200, встановлюємо флаг в true
+                Console.WriteLine($"Модель з потужністю двигуна більше 200 к.с.: {power} к.с.");
             }
         }
 
         if (hasModelWithHighPower)
         {
-            Console.WriteLine("There is a model with engine power exceeding 200 hp.");
+            Console.WriteLine("Є модель з потужністю двигуна понад 200 к.с.");
         }
         else
         {
-            Console.WriteLine("There is no model with engine power exceeding 200 hp.");
+            Console.WriteLine("Немає моделі з потужністю двигуна понад 200 к.с.");
         }
     }
 }
