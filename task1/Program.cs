@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 class Program
 {
@@ -9,11 +9,13 @@ class Program
 
         int sumb = 0;
 
+        // Обчислюємо загальну суму балів усіх видів спорту
         foreach (int ball in bal)
         {
             sumb += ball;
         }
 
+        // Перевіряємо, чи спортсмен проходить в наступний етап соревновань
         if (sumb > porog)
         {
             Console.WriteLine("Спортсмен проходить в наступний етап соревнований.");
